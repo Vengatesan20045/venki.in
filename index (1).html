@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vengatesan S – Digital Marketing Executive specializing in SEO, Content Marketing, and data-driven growth strategies." />
+  <meta name="keywords" content="Digital Marketing, SEO, Content Marketing, Social Media, Google Ads, Trichy" />
+  <meta name="author" content="Vengatesan S" />
+  <title>Vengatesan S | Digital Marketing Executive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#0a0c10; --surface:#111318; --glass:rgba(255,255,255,0.045);
+      --border:rgba(255,255,255,0.08); --orange:#ff6b2b; --orange-lt:#ff8c55;
+      --blue:#3b82f6; --blue-lt:#60a5fa; --text:#e8eaf0; --muted:#7a7f8e;
+      --display:'Syne',sans-serif; --body:'Space Grotesk',sans-serif;
+      --r:14px; --trans:0.35s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(10,12,16,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:var(--display);font-size:1.35rem;font-weight:800;background:linear-gradient(135deg,var(--orange),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-links{display:flex;gap:2rem}
+    .nav-links a{font-size:0.875rem;font-weight:500;color:var(--muted);transition:color var(--trans)}
+    .nav-links a:hover{color:var(--orange)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+    .mobile-menu{display:none;position:fixed;top:0;right:0;bottom:0;width:260px;background:rgba(17,19,24,0.98);backdrop-filter:blur(20px);border-left:1px solid var(--border);z-index:200;flex-direction:column;padding:80px 2rem 2rem;gap:1.5rem;transform:translateX(100%);transition:transform var(--trans)}
+    .mobile-menu.open{transform:translateX(0);display:flex}
+    .mobile-menu a{font-size:1.05rem;font-weight:600;color:var(--muted);transition:color var(--trans)}
+    .mobile-menu a:hover{color:var(--orange)}
+    .close-menu{position:absolute;top:22px;right:24px;font-size:1.4rem;cursor:pointer;color:var(--muted);background:none;border:none;color:var(--muted)}
+
+    /* SECTIONS */
+    section{position:relative;z-index:1;padding:100px 6vw}
+    .section-tag{display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(255,107,43,0.3);padding:4px 12px;border-radius:99px;margin-bottom:1rem}
+    .section-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;margin-bottom:0.5rem}
+    .section-title span{color:var(--orange)}
+    .section-sub{color:var(--muted);max-width:520px;margin-bottom:3rem}
+
+    /* GLASS CARD */
+    .card{background:var(--glass);border:1px solid var(--border);border-radius:var(--r);backdrop-filter:blur(12px);padding:1.5rem;transition:border-color var(--trans),transform var(--trans),box-shadow var(--trans)}
+    .card:hover{border-color:rgba(255,107,43,0.35);transform:translateY(-4px);box-shadow:0 16px 40px rgba(255,107,43,0.12)}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-size:0.9rem;font-weight:600;padding:12px 28px;border-radius:8px;cursor:pointer;transition:var(--trans);border:none}
+    .btn-primary{background:linear-gradient(135deg,var(--orange),#e05520);color:#fff}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,107,43,0.4)}
+    .btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+    .btn-outline:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}
+
+    /* HERO */
+    #hero{min-height:100vh;display:flex;align-items:center;padding-top:90px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+    .hero-eyebrow{display:flex;align-items:center;gap:10px;font-size:0.8rem;font-weight:500;color:var(--muted);letter-spacing:0.08em;margin-bottom:1.2rem}
+    .hero-eyebrow::before{content:'';width:28px;height:2px;background:var(--orange);border-radius:2px}
+    .hero-name{font-family:var(--display);font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.0;margin-bottom:1rem}
+    .hero-name .grad{background:linear-gradient(135deg,var(--orange) 0%,var(--blue) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-role{font-size:1.05rem;color:var(--muted);margin-bottom:1.4rem;font-weight:400}
+    .hero-desc{color:var(--muted);font-size:0.93rem;max-width:480px;margin-bottom:2rem;line-height:1.8}
+    .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+    .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .stat-val{font-family:var(--display);font-size:1.8rem;font-weight:800;color:var(--orange)}
+    .stat-label{font-size:0.78rem;color:var(--muted);font-weight:500}
+
+    /* PROFILE */
+    .hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+    .profile-ring{position:relative;width:320px;height:320px}
+    .profile-ring::before{content:'';position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(var(--orange),var(--blue),var(--orange));animation:spin 6s linear infinite}
+    .profile-img-wrap{position:absolute;inset:3px;border-radius:50%;overflow:hidden;background:var(--surface);display:flex;align-items:center;justify-content:center}
+    .profile-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1d24,#111318)}
+    .profile-initials{font-family:var(--display);font-size:5rem;font-weight:800;background:linear-gradient(135deg,var(--orange),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .badge{position:absolute;background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(12px);border-radius:10px;padding:9px 13px;font-size:0.75rem;font-weight:600;display:flex;align-items:center;gap:8px;animation:float 4s ease-in-out infinite;white-space:nowrap}
+    .badge-1{top:8%;right:-8%;animation-delay:0s}
+    .badge-2{bottom:14%;left:-10%;animation-delay:1.5s}
+    .badge-3{top:55%;right:-12%;animation-delay:0.8s}
+    .badge .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .dot-orange{background:var(--orange)}.dot-blue{background:var(--blue)}.dot-green{background:#22c55e}
+    .orbit{position:absolute;border-radius:50%;border:1px dashed rgba(255,255,255,0.06)}
+    .orbit-1{width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .orbit-2{width:490px;height:490px;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:-1}
+    .glow-orange{background:rgba(255,107,43,0.12);width:500px;height:500px}
+    .glow-blue{background:rgba(59,130,246,0.08);width:400px;height:400px}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;max-width:1200px;margin:0 auto}
+    .about-text p{color:var(--muted);margin-bottom:1.2rem;font-size:0.93rem;line-height:1.8}
+    .about-interests{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+    .interest-tag{background:rgba(255,107,43,0.1);border:1px solid rgba(255,107,43,0.2);color:var(--orange-lt);border-radius:99px;padding:5px 14px;font-size:0.76rem;font-weight:500}
+    .about-cards{display:flex;flex-direction:column;gap:1rem}
+    .about-card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;font-size:1.3rem}
+    .icon-orange{background:rgba(255,107,43,0.12)}.icon-blue{background:rgba(59,130,246,0.12)}
+    .about-card-title{font-weight:700;font-size:1rem;margin-bottom:0.3rem}
+    .about-card-desc{font-size:0.84rem;color:var(--muted)}
+
+    /* EDUCATION */
+    #education{background:linear-gradient(180deg,var(--surface) 0%,var(--bg) 100%)}
+    .edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;max-width:1200px;margin:0 auto}
+    .edu-card{padding:1.8rem}
+    .edu-degree{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:0.3rem}
+    .edu-college{font-size:0.88rem;color:var(--blue-lt);font-weight:500;margin-bottom:0.4rem}
+    .edu-year{font-size:0.78rem;color:var(--muted)}
+
+    /* SKILLS */
+    #skills{background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%)}
+    .skills-wrapper{max-width:1200px;margin:0 auto}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem}
+    .skill-card{padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:0.8rem}
+    .skill-header{display:flex;align-items:center;gap:10px}
+    .skill-icon{font-size:1rem;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .skill-name{font-size:0.85rem;font-weight:600}
+    .skill-bar-wrap{height:4px;background:rgba(255,255,255,0.07);border-radius:99px;overflow:hidden}
+    .skill-bar{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--orange),var(--blue));width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+    .skill-pct{font-size:0.7rem;color:var(--muted);text-align:right}
+
+    /* TOOLS */
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:1rem}
+    .tool-card{padding:1.3rem 1rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+    .tool-emoji{font-size:1.7rem}
+    .tool-name{font-size:0.8rem;font-weight:600;color:var(--text)}
+    .tool-cat{font-size:0.68rem;color:var(--muted)}
+    .tools-section-title{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--orange);margin:2rem 0 0.8rem}
+
+    /* EXPERIENCE */
+    .exp-wrapper{max-width:900px;margin:0 auto}
+    .timeline{position:relative;padding-left:2rem}
+    .timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--orange),var(--blue))}
+    .timeline-item{position:relative;margin-bottom:2.5rem}
+    .timeline-dot{position:absolute;left:-2.4rem;top:6px;width:14px;height:14px;border-radius:50%;border:2px solid var(--orange);background:var(--bg)}
+    .exp-card{padding:1.8rem}
+    .exp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:0.3rem}
+    .exp-company{font-family:var(--display);font-size:1.1rem;font-weight:700}
+    .exp-badge{background:rgba(255,107,43,0.12);border:1px solid rgba(255,107,43,0.25);color:var(--orange);font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:99px}
+    .exp-badge-blue{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.25);color:var(--blue-lt)}
+    .exp-role{color:var(--muted);font-size:0.86rem;margin-bottom:1.2rem}
+    .exp-items{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+    .exp-items li{font-size:0.86rem;color:var(--muted);display:flex;align-items:flex-start;gap:8px}
+    .exp-items li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--orange);flex-shrink:0;margin-top:7px}
+
+    /* PROJECTS */
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem;max-width:1200px;margin:0 auto}
+    .proj-card{padding:2rem}
+    .proj-icon{font-size:2rem;margin-bottom:1rem;width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(59,130,246,0.1)}
+    .proj-title{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:0.2rem}
+    .proj-sub{font-size:0.8rem;color:var(--blue-lt);margin-bottom:1rem;font-weight:500}
+    .proj-list{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
+    .proj-list li{font-size:0.84rem;color:var(--muted);display:flex;align-items:flex-start;gap:8px}
+    .proj-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:7px}
+
+    /* CERT */
+    #certifications{background:linear-gradient(180deg,var(--surface) 0%,var(--bg) 100%)}
+    .cert-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem}
+    .cert-card{padding:1.8rem;display:flex;gap:1.2rem;align-items:flex-start}
+    .cert-badge-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;background:linear-gradient(135deg,rgba(255,107,43,0.15),rgba(59,130,246,0.15));border:1px solid rgba(255,107,43,0.2)}
+    .cert-name{font-weight:700;font-size:0.95rem;margin-bottom:0.2rem}
+    .cert-issuer{font-size:0.82rem;color:var(--blue-lt);font-weight:500}
+    .cert-year{font-size:0.76rem;color:var(--muted);margin-top:0.2rem}
+    .cert-desc{font-size:0.8rem;color:var(--muted);margin-top:0.6rem;line-height:1.7}
+
+    /* CONTACT */
+    .contact-wrapper{max-width:700px;margin:0 auto;text-align:center}
+    .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem}
+    .contact-link{display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;font-size:0.88rem;font-weight:600;transition:var(--trans)}
+    .cl-email{background:rgba(255,107,43,0.1);border:1px solid rgba(255,107,43,0.25);color:var(--orange-lt)}
+    .cl-email:hover{background:rgba(255,107,43,0.2);transform:translateY(-3px)}
+    .cl-linkedin{background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);color:var(--blue-lt)}
+    .cl-linkedin:hover{background:rgba(59,130,246,0.2);transform:translateY(-3px)}
+    .cl-phone{background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);color:#4ade80}
+    .cl-phone:hover{background:rgba(34,197,94,0.2);transform:translateY(-3px)}
+    .cl-portfolio{background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.25);color:#c084fc}
+    .cl-portfolio:hover{background:rgba(168,85,247,0.2);transform:translateY(-3px)}
+
+    footer{text-align:center;padding:2rem;border-top:1px solid var(--border);font-size:0.78rem;color:var(--muted);position:relative;z-index:1}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* ANIMATIONS */
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .hero-left>*{animation:fadeInUp 0.7s ease both}
+    .hero-left>*:nth-child(1){animation-delay:0.1s}
+    .hero-left>*:nth-child(2){animation-delay:0.2s}
+    .hero-left>*:nth-child(3){animation-delay:0.3s}
+    .hero-left>*:nth-child(4){animation-delay:0.4s}
+    .hero-left>*:nth-child(5){animation-delay:0.5s}
+    .hero-left>*:nth-child(6){animation-delay:0.6s}
+
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;text-align:center}
+      .hero-left{align-items:center;display:flex;flex-direction:column}
+      .hero-desc{text-align:center}
+      .hero-eyebrow,.hero-ctas,.hero-stats{justify-content:center}
+      .hero-visual{margin-top:2rem}
+      .profile-ring{width:260px;height:260px}
+      .badge-1{right:0}.badge-2{left:0}.badge-3{right:0}
+      .about-grid{grid-template-columns:1fr!important}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+    }
+    @media(max-width:600px){
+      section{padding:70px 5vw}
+      .profile-ring{width:210px;height:210px}
+      .badge{font-size:0.68rem;padding:7px 9px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">VS.</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#tools">Tools</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu">✕</button>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#education" class="mob-link">Education</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#tools" class="mob-link">Tools</a>
+  <a href="#experience" class="mob-link">Experience</a>
+  <a href="#projects" class="mob-link">Projects</a>
+  <a href="#certifications" class="mob-link">Certifications</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="glow glow-orange" style="top:10%;left:-5%;"></div>
+  <div class="glow glow-blue" style="bottom:5%;right:-5%;"></div>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow">MBA Marketing Graduate · Trichy, Tamil Nadu</div>
+      <h1 class="hero-name">Vengatesan<br><span class="grad">S.</span></h1>
+      <p class="hero-role">Digital Marketing Executive &nbsp;·&nbsp; SEO &amp; Content Marketing Enthusiast</p>
+      <p class="hero-desc">MBA Marketing graduate skilled in SEO, content optimization, keyword research, social media marketing, and digital campaigns. Passionate about helping businesses grow through data-driven strategies.</p>
+      <div class="hero-ctas">
+        <a href="mailto:svengat14@gmail.com" class="btn btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+        <a href="https://tinyurl.com/2n8sxba2" target="_blank" class="btn btn-outline">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Resume
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-val">2+</div><div class="stat-label">Internships</div></div>
+        <div><div class="stat-val">20+</div><div class="stat-label">Core Skills</div></div>
+        <div><div class="stat-val">20+</div><div class="stat-label">Marketing Tools</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="profile-ring">
+        <div class="profile-img-wrap">
+          <div class="profile-placeholder">
+            <span class="profile-initials">VS</span>
+          </div>
+        </div>
+      </div>
+      <div class="badge badge-1"><span class="dot dot-green"></span>Open to Opportunities</div>
+      <div class="badge badge-2"><span class="dot dot-orange"></span>SEO Specialist</div>
+      <div class="badge badge-3"><span class="dot dot-blue"></span>Content Marketer</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title">Turning Data into<br><span>Digital Growth</span></h2>
+      <p>I'm Vengatesan S, an MBA Marketing graduate from JJ College of Engineering &amp; Technology (2023–2025) with a strong passion for the ever-evolving world of digital marketing and online brand growth.</p>
+      <p>My hands-on internship experience at Adbee Solutions (Digital Marketing) and Danish Industry (HR &amp; Marketing) gave me real-world exposure to SEO auditing, keyword research, content optimization, competitor analysis, and social media campaigns.</p>
+      <p>I combine analytical thinking with creative execution to deliver campaigns that move the needle — from improving search rankings to driving measurable business growth.</p>
+      <div class="about-interests">
+        <span class="interest-tag">🔍 SEO</span>
+        <span class="interest-tag">📢 SEM</span>
+        <span class="interest-tag">📱 Social Media</span>
+        <span class="interest-tag">✍️ Content Marketing</span>
+        <span class="interest-tag">📊 Google Analytics</span>
+        <span class="interest-tag">📧 Email Marketing</span>
+        <span class="interest-tag">💰 Google Ads</span>
+        <span class="interest-tag">🤖 AI Tools</span>
+      </div>
+    </div>
+    <div class="about-cards">
+      <div class="card">
+        <div class="about-card-icon icon-orange">🎓</div>
+        <div class="about-card-title">MBA in Marketing</div>
+        <div class="about-card-desc">JJ College of Engineering &amp; Technology (2023–2025). Specialized in marketing management, consumer behaviour, and digital strategy.</div>
+      </div>
+      <div class="card">
+        <div class="about-card-icon icon-blue">🚀</div>
+        <div class="about-card-title">Hands-On Internships</div>
+        <div class="about-card-desc">Completed digital marketing and HR &amp; marketing internships, working on live campaigns, SEO audits, and market research.</div>
+      </div>
+      <div class="card">
+        <div class="about-card-icon icon-orange">🤖</div>
+        <div class="about-card-title">AI-Augmented Marketer</div>
+        <div class="about-card-desc">Proficient with ChatGPT, Gemini, Claude, and Nano Banana to accelerate content creation and research workflows.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="margin-bottom:3rem;">
+      <span class="section-tag">Academic Background</span>
+      <h2 class="section-title">My <span>Education</span></h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="card edu-card">
+        <div style="font-size:1.8rem;margin-bottom:0.8rem;">🎓</div>
+        <div class="edu-degree">Master of Business Administration</div>
+        <div class="edu-degree" style="font-size:0.9rem;font-weight:500;color:var(--orange);">Marketing Specialization</div>
+        <div class="edu-college">JJ College of Engineering &amp; Technology</div>
+        <div class="edu-year">2023 – 2025</div>
+      </div>
+      <div class="card edu-card">
+        <div style="font-size:1.8rem;margin-bottom:0.8rem;">📚</div>
+        <div class="edu-degree">Bachelor of Commerce</div>
+        <div class="edu-degree" style="font-size:0.9rem;font-weight:500;color:var(--blue-lt);">B.Com</div>
+        <div class="edu-college">SRM Trichy Arts &amp; Science College</div>
+        <div class="edu-year">Completed 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="skills-wrapper">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <span class="section-tag">Core Competencies</span>
+      <h2 class="section-title">My <span>Skill Set</span></h2>
+      <p class="section-sub" style="margin:0.5rem auto 0;">Specialized capabilities built through coursework, certifications, and real-world campaigns.</p>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="card skill-card" data-pct="90"><div class="skill-header"><div class="skill-icon icon-orange">🔍</div><span class="skill-name">SEO (Overall)</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">90%</div></div>
+      <div class="card skill-card" data-pct="88"><div class="skill-header"><div class="skill-icon icon-blue">📄</div><span class="skill-name">On-Page SEO</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">88%</div></div>
+      <div class="card skill-card" data-pct="78"><div class="skill-header"><div class="skill-icon icon-orange">⚙️</div><span class="skill-name">Technical SEO</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">78%</div></div>
+      <div class="card skill-card" data-pct="80"><div class="skill-header"><div class="skill-icon icon-blue">🔗</div><span class="skill-name">Off-Page SEO</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">80%</div></div>
+      <div class="card skill-card" data-pct="92"><div class="skill-header"><div class="skill-icon icon-orange">🗝️</div><span class="skill-name">Keyword Research</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">92%</div></div>
+      <div class="card skill-card" data-pct="82"><div class="skill-header"><div class="skill-icon icon-blue">📊</div><span class="skill-name">Google Analytics</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">82%</div></div>
+      <div class="card skill-card" data-pct="80"><div class="skill-header"><div class="skill-icon icon-orange">🖥️</div><span class="skill-name">Search Console</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">80%</div></div>
+      <div class="card skill-card" data-pct="85"><div class="skill-header"><div class="skill-icon icon-blue">📢</div><span class="skill-name">Digital Marketing</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">85%</div></div>
+      <div class="card skill-card" data-pct="75"><div class="skill-header"><div class="skill-icon icon-orange">💰</div><span class="skill-name">SEM</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">75%</div></div>
+      <div class="card skill-card" data-pct="85"><div class="skill-header"><div class="skill-icon icon-blue">📱</div><span class="skill-name">Social Media Mktg</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">85%</div></div>
+      <div class="card skill-card" data-pct="88"><div class="skill-header"><div class="skill-icon icon-orange">✍️</div><span class="skill-name">Content Creation</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">88%</div></div>
+      <div class="card skill-card" data-pct="85"><div class="skill-header"><div class="skill-icon icon-blue">🔄</div><span class="skill-name">Content Optimization</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">85%</div></div>
+      <div class="card skill-card" data-pct="82"><div class="skill-header"><div class="skill-icon icon-orange">🕵️</div><span class="skill-name">Competitor Analysis</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">82%</div></div>
+      <div class="card skill-card" data-pct="70"><div class="skill-header"><div class="skill-icon icon-blue">💵</div><span class="skill-name">Google Ads</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">70%</div></div>
+      <div class="card skill-card" data-pct="68"><div class="skill-header"><div class="skill-icon icon-orange">📘</div><span class="skill-name">Meta Ads</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">68%</div></div>
+      <div class="card skill-card" data-pct="72"><div class="skill-header"><div class="skill-icon icon-blue">📧</div><span class="skill-name">Email Marketing</span></div><div class="skill-bar-wrap"><div class="skill-bar"></div></div><div class="skill-pct">72%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <span class="section-tag">My Toolkit</span>
+      <h2 class="section-title">Tools &amp; <span>Platforms</span></h2>
+    </div>
+
+    <div class="reveal">
+      <div class="tools-section-title">🔵 Google Tools</div>
+      <div class="tools-grid">
+        <div class="card tool-card"><div class="tool-emoji">📊</div><div class="tool-name">Google Analytics</div><div class="tool-cat">Analytics</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🗝️</div><div class="tool-name">Keyword Planner</div><div class="tool-cat">Research</div></div>
+        <div class="card tool-card"><div class="tool-emoji">📈</div><div class="tool-name">Google Trends</div><div class="tool-cat">Research</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🏷️</div><div class="tool-name">Tag Manager</div><div class="tool-cat">Tracking</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🔬</div><div class="tool-name">Tag Assistant</div><div class="tool-cat">QA</div></div>
+        <div class="card tool-card"><div class="tool-emoji">📍</div><div class="tool-name">Google My Business</div><div class="tool-cat">Local SEO</div></div>
+      </div>
+
+      <div class="tools-section-title">🔴 SEO Tools</div>
+      <div class="tools-grid">
+        <div class="card tool-card"><div class="tool-emoji">🔎</div><div class="tool-name">SEMrush</div><div class="tool-cat">SEO</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🌐</div><div class="tool-name">SimilarWeb</div><div class="tool-cat">Analytics</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🕵️</div><div class="tool-name">SpyFu</div><div class="tool-cat">Competitive</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🧭</div><div class="tool-name">Moz</div><div class="tool-cat">SEO</div></div>
+      </div>
+
+      <div class="tools-section-title">🟣 Social Media Tools</div>
+      <div class="tools-grid">
+        <div class="card tool-card"><div class="tool-emoji">📅</div><div class="tool-name">Buffer</div><div class="tool-cat">Scheduling</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🦉</div><div class="tool-name">Hootsuite</div><div class="tool-cat">Management</div></div>
+        <div class="card tool-card"><div class="tool-emoji">📘</div><div class="tool-name">Meta Business Suite</div><div class="tool-cat">Ads</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🔷</div><div class="tool-name">Meta Pixel Helper</div><div class="tool-cat">Tracking</div></div>
+      </div>
+
+      <div class="tools-section-title">🟠 Design &amp; CMS</div>
+      <div class="tools-grid">
+        <div class="card tool-card"><div class="tool-emoji">🎨</div><div class="tool-name">Canva</div><div class="tool-cat">Design</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🌐</div><div class="tool-name">WordPress</div><div class="tool-cat">CMS</div></div>
+        <div class="card tool-card"><div class="tool-emoji">✅</div><div class="tool-name">Yoast SEO</div><div class="tool-cat">SEO Plugin</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🔌</div><div class="tool-name">All in One SEO</div><div class="tool-cat">SEO Plugin</div></div>
+      </div>
+
+      <div class="tools-section-title">🟢 Email &amp; AI Tools</div>
+      <div class="tools-grid">
+        <div class="card tool-card"><div class="tool-emoji">📧</div><div class="tool-name">Mailchimp</div><div class="tool-cat">Email</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🤖</div><div class="tool-name">ChatGPT</div><div class="tool-cat">AI</div></div>
+        <div class="card tool-card"><div class="tool-emoji">✨</div><div class="tool-name">Gemini</div><div class="tool-cat">AI</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🧠</div><div class="tool-name">Claude</div><div class="tool-cat">AI</div></div>
+        <div class="card tool-card"><div class="tool-emoji">🍌</div><div class="tool-name">Nano Banana</div><div class="tool-cat">AI</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%);">
+  <div class="exp-wrapper">
+    <div class="reveal" style="margin-bottom:3rem;">
+      <span class="section-tag">Professional Journey</span>
+      <h2 class="section-title">Internship <span>Experience</span></h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card exp-card">
+          <div class="exp-top">
+            <div>
+              <div class="exp-company">Adbee Solutions</div>
+              <div class="exp-role">Digital Marketing Intern &nbsp;·&nbsp; 📍 Trichy &nbsp;·&nbsp; 2026</div>
+            </div>
+            <span class="exp-badge">Digital Marketing</span>
+          </div>
+          <ul class="exp-items">
+            <li>Conducted keyword research using Google Keyword Planner and SEO tools to identify ranking opportunities</li>
+            <li>Assisted in optimizing website content, meta tags, headings, and images for improved search visibility</li>
+            <li>Supported SEO audits and competitor analysis for campaign planning</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.2rem;">
+            <span style="background:rgba(255,107,43,0.08);border:1px solid rgba(255,107,43,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--orange-lt);">Keyword Research</span>
+            <span style="background:rgba(255,107,43,0.08);border:1px solid rgba(255,107,43,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--orange-lt);">On-Page SEO</span>
+            <span style="background:rgba(255,107,43,0.08);border:1px solid rgba(255,107,43,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--orange-lt);">SEO Audit</span>
+            <span style="background:rgba(255,107,43,0.08);border:1px solid rgba(255,107,43,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--orange-lt);">Competitor Analysis</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="border-color:var(--blue);"></div>
+        <div class="card exp-card">
+          <div class="exp-top">
+            <div>
+              <div class="exp-company">Danish Industry</div>
+              <div class="exp-role">HR &amp; Marketing Intern &nbsp;·&nbsp; 📍 Viralimalai &nbsp;·&nbsp; 2024</div>
+            </div>
+            <span class="exp-badge exp-badge-blue">HR &amp; Marketing</span>
+          </div>
+          <ul class="exp-items">
+            <li>Supported recruitment, onboarding, and employee engagement activities</li>
+            <li>Assisted the marketing team with market research and promotional support</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.2rem;">
+            <span style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--blue-lt);">Recruitment</span>
+            <span style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--blue-lt);">Market Research</span>
+            <span style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.18);font-size:0.68rem;padding:3px 9px;border-radius:99px;color:var(--blue-lt);">Promotions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="margin-bottom:3rem;">
+      <span class="section-tag">Portfolio Work</span>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-sub">Real-world projects where I applied marketing and HR skills to drive results.</p>
+    </div>
+    <div class="proj-grid reveal">
+
+      <!-- Project 1 -->
+      <div class="card proj-card" style="border-top:3px solid var(--orange);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;flex-wrap:wrap;gap:0.5rem;">
+          <div class="proj-icon" style="margin-bottom:0;">🏥</div>
+          <span style="background:rgba(255,107,43,0.12);border:1px solid rgba(255,107,43,0.25);color:var(--orange);font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:99px;">HR &amp; Marketing</span>
+        </div>
+        <div class="proj-title">Silver Line Hospital</div>
+        <div class="proj-sub">📍 Trichy &nbsp;·&nbsp; 2025</div>
+        <ul class="proj-list">
+          <li>Assisted HR operations including recruitment coordination and candidate record management</li>
+          <li>Supported hospital branding initiatives to strengthen public presence and trust</li>
+          <li>Contributed to marketing campaigns promoting hospital services to the local community</li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.2rem;">
+          <span style="background:rgba(255,255,255,0.05);border:1px solid var(--border);font-size:0.7rem;padding:3px 9px;border-radius:99px;color:var(--muted);">Recruitment</span>
+          <span style="background:rgba(255,255,255,0.05);border:1px solid var(--border);font-size:0.7rem;padding:3px 9px;border-radius:99px;color:var(--muted);">Branding</span>
+          <span style="background:rgba(255,255,255,0.05);border:1px solid var(--border);font-size:0.7rem;padding:3px 9px;border-radius:99px;color:var(--muted);">Marketing Support</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Certifications &amp; <span>Training</span></h2>
+    </div>
+    <div class="cert-grid reveal">
+      <div class="card cert-card">
+        <div class="cert-badge-icon">🏅</div>
+        <div>
+          <div class="cert-name">Advanced Digital Marketing</div>
+          <div class="cert-issuer">FITA Academy</div>
+          <div class="cert-year">Completed 2026</div>
+          <div class="cert-desc">Hands-on exposure to SEO, social media marketing, and content strategy. Practical experience in keyword research using Google Keyword Planner and applied on-page SEO techniques including meta tags, headings, and image optimization.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:linear-gradient(180deg,var(--bg) 0%,rgba(255,107,43,0.03) 100%);">
+  <div class="contact-wrapper reveal">
+    <span class="section-tag">Get in Touch</span>
+    <h2 class="section-title">Let's Build Something <span>Together</span></h2>
+    <p style="color:var(--muted);margin-top:1rem;font-size:0.93rem;line-height:1.8;">Open to full-time digital marketing roles, freelance projects, and collaborations. I'd love to connect and discuss how I can help your business grow online.</p>
+    <div class="contact-links">
+      <a href="mailto:svengat14@gmail.com" class="contact-link cl-email">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+        svengat14@gmail.com
+      </a>
+      <a href="tel:8825821179" class="contact-link cl-phone">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.35 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.63a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+        88258 21179
+      </a>
+      <a href="https://linkedin.com/in/Vengatesan-hr" target="_blank" rel="noopener" class="contact-link cl-linkedin">
+        <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn Profile
+      </a>
+      <a href="https://tinyurl.com/2n8sxba2" target="_blank" rel="noopener" class="contact-link cl-portfolio">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        View Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Vengatesan S &nbsp;·&nbsp; Digital Marketing Executive &nbsp;·&nbsp; Trichy, Tamil Nadu</p>
+</footer>
+
+<script>
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileMenu');
+  const cls = document.getElementById('closeMenu');
+  ham.addEventListener('click', () => mob.classList.add('open'));
+  cls.addEventListener('click', () => mob.classList.remove('open'));
+  document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mob.classList.remove('open')));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('.skill-card').forEach(card => {
+          const bar = card.querySelector('.skill-bar');
+          if (bar) bar.style.width = card.dataset.pct + '%';
+        });
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--orange)' : ''; });
+  });
+</script>
+</body>
+</html>
